@@ -1,0 +1,94 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>RWD Calculator v0 | a thing from alwaystwisted.com</title>
+	
+	
+	<meta name="description" content="">
+	<meta name="author" content="Stuart Robson, Always Twisted, stu@alwaystwisted.com">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	<link rel="stylesheet" href="css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
+	<!--[if lt IE 9]>
+	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="js/libs/respond.min.js"></script>
+</head>
+<body>
+	<div class="calc function-pane">
+		<header>
+			<h1>The Responsive Calculator</h1>
+			<h2>turning pixels into percentages</h2>
+		</header>
+		<section>
+			<p>Just a simple calculator to help turn your PSD pixel perfection into the start of your responsive website.</p>
+			<p>target / context = result</p>
+		</section>
+			<form id="result">
+			    <label for="selector">element <span>(example: body)</span></label>
+			    <input type="text" id="element" label="element">
+			    <label for="target">target <span>(example: 980px)</span></label>
+			    <input type="number" id="target" label="target">
+			    <label for="context">context <span>(example: 1024px)</span></label>
+			    <input type="number" id="context" label="context">
+			    <label for="border">border <span>(example: 10px)</span></label>
+			    <input type="text" id="border" label="border">
+			    <label for="margin">margin <span>(example: 10px)</span></label>
+			    <input type="text" id="margin" label="margin">
+			    <label for="padding">padding <span>(example: 10px)</span></label>
+			    <input type="text" id="padding" label="padding">
+			    <input type="submit" id="results">
+			</form>
+			    
+			<footer>
+			    
+			    <p>Created with love, tears and help by <a href="http://www.twitter.com/sturobson/">@sturobson</a></p>
+			    <p>This is just an initial release, I'd love for this to do so much more. <a href="mailto:stu@alwaystisted.com">Can you help?</a></p>
+			    <p>Why not take a look at my <a href="http://wwww.alwaystwisted.com/">blog over on alwaystwisted.com</a>
+			    
+		    </footer>
+	</div>
+
+	<div class="calc results-pane">
+		<a href="http://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/abad93f42020b733148435e2cd92ce15c542d320/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub"></a>
+		<div id="code-results">
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<!-- <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script> -->
+
+<!-- scripts concatenated and minified via ant build script-->
+<script src="js/plugins.js"></script>
+<script src="js/script.js"></script>
+<!-- end scripts-->
+
+<script>
+	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
+	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<!--[if lt IE 7 ]>
+	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+	<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+<![endif]-->
+
+</body>
+</html>
