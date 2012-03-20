@@ -1,8 +1,4 @@
 <!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -31,40 +27,54 @@
 		<section>
 			<p>Just a simple calculator to help turn your PSD pixel perfection into the start of your rocking responsive website.</p>
 		</section>
+
+<label for="boxsizing">Add - * { box-sizing: border-box; } ? </label>
+<input type="checkbox" id="boxsizing" lable="boxsizing">		
+		
 			<form id="result">
-			    <label for="selector">element</label>
-			    <input type="text" id="element" label="element" value="body">
-			    <label for="target">target</label>
-			    <input type="number" id="target" label="target" value="980">
-			    <label for="context">context</label>
-			    <input type="number" id="context" label="context" value="1024">
-			    <label for="border">border</label>
-			    <input type="text" id="border" label="border" value="10px">
-			    <label for="margin">margin</label>
-			    <input type="text" id="margin" label="margin" value="10px">
-			    <label for="padding">padding</label>
-			    <input type="text" id="padding" label="padding" value="10px">
-			    <input type="submit" id="results">
+					<label for="selector">element</label>
+				    <input type="text" id="element" label="element" value="body">
+				    <label for="target">target</label>
+				    <input type="number" id="target" label="target" value="980">
+				    <label for="context">context</label>
+				    <input type="number" id="context" label="context" value="1024">
+				    <label for="border">border</label>
+				    <input type="text" id="border" label="border" value="10px">
+				    <label for="margin">margin</label>
+				    <input type="text" id="margin" label="margin" value="10px">
+				    <label for="padding">padding</label>
+				    <input type="text" id="padding" label="padding" value="10px">
+				    <input type="submit" id="results">
 			</form>
 	</div>
 
 	<div class="calc results-pane">
 		<a href="http://github.com/sturobson/Responsive-Calculator"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/abad93f42020b733148435e2cd92ce15c542d320/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub"></a>
 		<div id="code-results">
+			<div id="boxsizingcss">
+			    <p>* {</p>
+			    <p>-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */</p>
+			    <p>-moz-box-sizing: border-box;    /* Firefox, other Gecko */</p>
+			    <p>box-sizing: border-box;         /* Opera/IE 8+ */</p>
+			    <p>}</p>
+			</div>
 		</div>
-		<footer>    
-			<p>Created with love, tears and help by <a href="http://www.twitter.com/sturobson/">@sturobson</a></p>
-			<p>This is just an initial release, I'd love for this to do so much more. <a href="mailto:stu@alwaystisted.com">Can you help?</a></p>
-			<p>Why not take a look at my <a href="http://www.alwaystwisted.com/">blog over on alwaystwisted.com</a>
-			    <section>
-			    	<h4>Please Note:</h4>
-			  	<p>I originally came up with this idea in August 2011, it's taken me this long to get it to this state.</p>
-			  	<p>That's why it'll probably break, so help me with the code on github</p>
-
-			    	<h4>Updates</h4>
-			    	<p>18th March 2012</p>
-			    	<p>Just the initial launch, to get the ball rolling</p>
-			    </section>
+		<footer>
+		  
+		  <p>Created with love, tears and help by <a href="http://www.twitter.com/sturobson/">@sturobson</a></p>
+		  <p>This is just an initial release, I'd love for this to do so much more. <a href="mailto:stu@alwaystisted.com">Can you help?</a></p>
+		  <p>Why not take a look at my <a href="http://www.alwaystwisted.com/">blog over on alwaystwisted.com</a>
+		  <section>
+		  	<h4>Please Note:</h4>
+		  	<p>I originally came up with this idea in August 2011, it's taken me this long to get it to this state.</p>
+		  	<p>That's why it'll probably break, so help me with the code on github</p>
+		  	<h4>Updates</h4>
+		  	<p>18th March 2012</p>
+		  	<p>Just the initial launch, to get the ball rolling</p>
+		  
+		  </section>
+		  
+		  
 		</footer>
 	</div>
 
@@ -84,7 +94,7 @@
 <!-- end scripts-->
 
 <script>
-	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
+	var _gaq=[['_setAccount','UA-7941562-1'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
 	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
 	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 	s.parentNode.insertBefore(g,s)}(document,'script'));
