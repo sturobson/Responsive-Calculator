@@ -226,6 +226,11 @@ p#code-results {
     padding-left: 10px;
     margin-top: 10px;
 }
+
+#boxsizingcss p {
+	margin: 0;
+	padding: 0 1%;
+}
 p#code-results span {
     display: block; padding-left: 20px;
 }​
