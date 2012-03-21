@@ -1,9 +1,13 @@
 <!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title>RWD Calculator v0 | a thing from alwaystwisted.com</title>
+	<title>RWD Calculator v0.2 | a thing from alwaystwisted.com</title>
 	
 	
 	<meta name="description" content="">
@@ -25,27 +29,32 @@
 			<h2>turning pixels into percentages</h2>
 		</header>
 		<section>
-			<p>Just a simple calculator to help turn your PSD pixel perfection into the start of your rocking responsive website.</p>
+			<p>Just a simple calculator to help turn your PSD pixel perfection into the start of your responsive website.</p>
 		</section>
-
-<label for="boxsizing">Add - * { box-sizing: border-box; } ? </label>
-<input type="checkbox" id="boxsizing" lable="boxsizing">		
+		
+		<label for="boxsizing">Add - * { box-sizing: border-box; } ? </label>
+		<input type="checkbox" id="boxsizing" lable="boxsizing">
+		
 		
 			<form id="result">
-					<label for="selector">element</label>
-				    <input type="text" id="element" label="element" placeholder="body">
-				    <label for="target">target</label>
-				    <input type="number" id="target" label="target" placeholder="980px">
-				    <label for="context">context</label>
-				    <input type="number" id="context" label="context" placeholder="1024px">
-				    <label for="border">border</label>
-				    <input type="text" id="border" label="border" placeholder="10px">
-				    <label for="margin">margin</label>
-				    <input type="text" id="margin" label="margin" placeholder="10px">
-				    <label for="padding">padding</label>
-				    <input type="text" id="padding" label="padding" placeholder="10px">
-				    <input type="submit" id="results">
+			    <label for="selector">element <span>(example: body)</span></label>
+			    <input type="text" id="element" label="element">
+			    <label for="target">target <span>(example: 980px)</span></label>
+			    <input type="number" id="target" label="target">
+			    <label for="context">context <span>(example: 1024px)</span></label>
+			    <input type="number" id="context" label="context">
+			    <label for="border">border <span>(example: 10px)</span></label>
+			    <input type="text" id="border" label="border">
+			    <label for="margin">margin <span>(example: 10px)</span></label>
+			    <input type="text" id="margin" label="margin">
+			    <label for="padding">padding <span>(example: 10px)</span></label>
+			    <input type="text" id="padding" label="padding">
+			    <input type="submit" id="results">
+			    <input type="submit" id="last" value="Clear Last">
+			    <input type="submit" id="clear" value="Clear All">
 			</form>
+			    
+
 	</div>
 
 	<div class="calc results-pane">
@@ -58,8 +67,10 @@
 			    <p>box-sizing: border-box;         /* Opera/IE 8+ */</p>
 			    <p>}</p>
 			</div>
+			<div id="coderesults">
+			</div>
 		</div>
-		<footer>
+<footer>
 		  
 		  <p>Created with love, tears and help by <a href="http://www.twitter.com/sturobson/">@sturobson</a></p>
 		  <p>This is just an initial release, I'd love for this to do so much more. <a href="mailto:stu@alwaystisted.com">Can you help?</a></p>
@@ -71,6 +82,12 @@
 		  	<h4>Updates</h4>
 		  	<p>18th March 2012</p>
 		  	<p>Just the initial launch, to get the ball rolling</p>
+		  	<p>20th March 2012</p>
+		  	<p>Added an option to include CSS box-sizing</p>
+		  	<p>21st March 2012</p>
+		  	<p>Added a clear all button</p>
+		  	<p>A tiny update via GitHub to give 0 as a result instead of 0% or 0px</p>
+		  	<p>Added a clear last button</p>
 		  
 		  </section>
 		  
@@ -94,7 +111,7 @@
 <!-- end scripts-->
 
 <script>
-	var _gaq=[['_setAccount','UA-7941562-1'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
+	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
 	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
 	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 	s.parentNode.insertBefore(g,s)}(document,'script'));
