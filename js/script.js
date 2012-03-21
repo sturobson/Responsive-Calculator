@@ -42,7 +42,7 @@ if ($("#boxsizing").is(":checked")) {
       // not the box-sizing result
             $("<p></p>", {
             html: ele + " {<br><span>width: " + BoxSizingResult + (BoxSizingResult > 0 ? "%;" : "") + " /* " + target + " / " + context + " */ " + "<br>border: " + border + (border > 0 ? "px" : "") + "; " + "<br>margin: " + MarginResult + (MarginResult > 0 ? "%" : "") + "; " + "<br>padding: " + PaddingResult + (PaddingResult > 0 ? "%" : "") + ";" + "<br> </span>}"
-        }).hide().appendTo("#code-results").fadeIn();
+        }).hide().appendTo("#coderesults").fadeIn();
 
     }
 else {   
@@ -52,7 +52,7 @@ else {
 
             $("<p></p>", {
             html: ele + " {<br><span>width: " + OriginalResult + (OriginalResult > 0 ? "%;" : "") + ";" + " /* " + ActualTarget + " (originally " + target + ") / " + context + " */ " + "<br>border: " + border + (border > 0 ? "px" : "") + "; " + "<br>margin: " + MarginResult + (MarginResult > 0 ? "%" : "") + "; " + "<br>padding: " + PaddingResult + (PaddingResult > 0 ? "%" : "") + ";" + "<br> </span>}"
-        }).hide().appendTo("#code-results").fadeIn();
+        }).hide().appendTo("#coderesults").fadeIn();
 }
 //   
   
@@ -97,4 +97,16 @@ $(function() {
          if(el.val() == '')
              el.val(el.attr('title'));
     });
+ });
+ 
+ 
+  // clear the results function
+ $("#clear").click(function () {
+   $("#coderesults p").remove();
+   return false;
+ });
+  // clear last result function
+ $("#last").click(function () {
+   $("#coderesults p:last-child").remove();
+   return false;
  });
