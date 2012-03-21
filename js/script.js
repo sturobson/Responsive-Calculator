@@ -30,33 +30,26 @@ $(function(){
         
         var ActualTarget = target - DoubleBorder - DoubleMargin - DoublePadding * 1;
         var result3 = target - DoubleMargin * 1;
-        var MarginResult = round(div(margin, target) * 100, 5);
-        var PaddingResult = round(div(padding, target) * 100, 5);
-        var OriginalResult = round(div(ActualTarget, context) * 100, 5);
-        var BoxSizingResult = round(div(target, context) * 100, 5);                
+        var MarginResult = round(div(margin, target) * 100, 9);
+        var PaddingResult = round(div(padding, target) * 100, 9);
+        var OriginalResult = round(div(ActualTarget, context) * 100, 9);
+        var BoxSizingResult = round(div(target, context) * 100, 9);                
         
         var BorderResult = target - border * 1;
         
 if ($("#boxsizing").is(":checked")) {      
- //    
       // not the box-sizing result
-            $("<p></p>", {
-            html: ele + " {<br><span>width: " + BoxSizingResult + (BoxSizingResult > 0 ? "%;" : "") + " /* " + target + " / " + context + " */ " + "<br>border: " + border + (border > 0 ? "px" : "") + "; " + "<br>margin: " + MarginResult + (MarginResult > 0 ? "%" : "") + "; " + "<br>padding: " + PaddingResult + (PaddingResult > 0 ? "%" : "") + ";" + "<br> </span>}"
-        }).hide().appendTo("#coderesults").fadeIn();
-
+	$("<p></p>", {
+     html: ele + " {<br><span>width: " + BoxSizingResult + (BoxSizingResult > 0 ? "%;" : "") + " /* " + target + " / " + context + " */ " + "<br>border: " + border + (border > 0 ? "px" : "") + "; " + "<br>margin: " + MarginResult + (MarginResult > 0 ? "%" : "") + "; " + "<br>padding: " + PaddingResult + (PaddingResult > 0 ? "%" : "") + ";" + "<br> </span>}"
+     }).hide().appendTo("#coderesults").fadeIn();
     }
 else {   
-
-
-    // the box sizing
-
-            $("<p></p>", {
-            html: ele + " {<br><span>width: " + OriginalResult + (OriginalResult > 0 ? "%;" : "") + ";" + " /* " + ActualTarget + " (originally " + target + ") / " + context + " */ " + "<br>border: " + border + (border > 0 ? "px" : "") + "; " + "<br>margin: " + MarginResult + (MarginResult > 0 ? "%" : "") + "; " + "<br>padding: " + PaddingResult + (PaddingResult > 0 ? "%" : "") + ";" + "<br> </span>}"
-        }).hide().appendTo("#coderesults").fadeIn();
-}
-//   
-  
-    });
+     // the box sizing
+    $("<p></p>", {
+      html: ele + " {<br><span>width: " + OriginalResult + (OriginalResult > 0 ? "%;" : "") + ";" + " /* " + ActualTarget + " (originally " + target + ") / " + context + " */ " + "<br>border: " + border + (border > 0 ? "px" : "") + "; " + "<br>margin: " + MarginResult + (MarginResult > 0 ? "%" : "") + "; " + "<br>padding: " + PaddingResult + (PaddingResult > 0 ? "%" : "") + ";" + "<br> </span>}"
+      }).hide().appendTo("#coderesults").fadeIn();
+     }
+});
 
 }); 
     
@@ -71,35 +64,16 @@ else {
         if ($("#boxsizing").is(":checked"))
         {
             //show the hidden div
-            $("#boxsizingcss").show("slow");
+            $("#boxsizingcss").fadeIn();
         }        else
         {
             //otherwise, hide it
-            $("#boxsizingcss").hide("fast");
+            $("#boxsizingcss").fadeOut();
         }
-      });
+      });      
+});
 
 
-      
-});//]]> 
-
-$(function() {
-    var input = $('input[type=text]');
-
-    input.focus(function() {
-         $(this).val('');
-    }).blur(function() {
-         var el = $(this);
-
-         /* use the elements title attribute to store the 
-            default text - or the new HTML5 standard of using
-            the 'data-' prefix i.e.: data-default="some default" */
-         if(el.val() == '')
-             el.val(el.attr('title'));
-    });
- });
- 
- 
   // clear the results function
  $("#clear").click(function () {
    $("#coderesults p").remove();
