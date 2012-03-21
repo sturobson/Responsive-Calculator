@@ -32,23 +32,23 @@
 			<p>Just a simple calculator to help turn your PSD pixel perfection into the start of your responsive website.</p>
 		</section>
 		
-		<label for="boxsizing">Add - * { box-sizing: border-box; } ? </label>
+		<label id="boxcheckbox" for="boxsizing">Add - * { box-sizing: border-box; } ? </label>
 		<input type="checkbox" id="boxsizing" lable="boxsizing">
 		
 		
 			<form id="result">
-			    <label for="selector">element <span>(example: body)</span></label>
-			    <input type="text" id="element" label="element">
-			    <label for="target">target <span>(example: 980px)</span></label>
-			    <input type="number" id="target" label="target">
-			    <label for="context">context <span>(example: 1024px)</span></label>
-			    <input type="number" id="context" label="context">
-			    <label for="border">border <span>(example: 10px)</span></label>
-			    <input type="text" id="border" label="border">
-			    <label for="margin">margin <span>(example: 10px)</span></label>
-			    <input type="text" id="margin" label="margin">
-			    <label for="padding">padding <span>(example: 10px)</span></label>
-			    <input type="text" id="padding" label="padding">
+			    <label for="selector">element</label>
+			    <input type="text" id="element" label="element" placeholder="body">
+			    <label for="target">target</label>
+			    <input type="number" id="target" label="target" placeholder="980px">
+			    <label for="context">context</label>
+			    <input type="number" id="context" label="context" placeholder="1024px">
+			    <label for="border">border</label>
+			    <input type="text" id="border" label="border" placeholder="10px">
+			    <label for="margin">margin</label>
+			    <input type="text" id="margin" label="margin" placeholder="10px">
+			    <label for="padding">padding</label>
+			    <input type="text" id="padding" label="padding" placeholder="10px">
 			    <input type="submit" id="results">
 			    <input type="submit" id="last" value="Clear Last">
 			    <input type="submit" id="clear" value="Clear All">
@@ -110,11 +110,18 @@
 <script src="js/script.js"></script>
 <!-- end scripts-->
 
-<script>
-	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
-	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-	s.parentNode.insertBefore(g,s)}(document,'script'));
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30234812-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
 </script>
 
 <!--[if lt IE 7 ]>
