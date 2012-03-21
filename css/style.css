@@ -152,6 +152,7 @@ input[type=submit] {
 	padding: 2% 6%;
 	text-shadow: 0 1px 1px rgb(79, 196, 148);
 	margin-bottom: 3%;
+	margin-left: 3%;
 }
 
 input[type=submit]:hover {
@@ -214,6 +215,11 @@ footer a:hover {
 	padding: 1%;
 }
 
+#boxsizingcss p {
+	margin:  0;
+	padding: 0 1%;
+}
+
 section {
 	width: 90%;
 }
@@ -225,11 +231,6 @@ p#code-results {
     display: block;
     padding-left: 10px;
     margin-top: 10px;
-}
-
-#boxsizingcss p {
-	margin: 0;
-	padding: 0 1%;
 }
 p#code-results span {
     display: block; padding-left: 20px;
