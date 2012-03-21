@@ -93,6 +93,8 @@ body {
 h1, h2, h3, h4, h5, h6 { 
 	font-family: 'Limelight', cursive; 
 	margin-bottom: 0.5em;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3); 
+	
 }
 
 h1 {
@@ -100,14 +102,12 @@ h1 {
 	font-size: 2em; 
 	letter-spacing: 0.1em;
 	text-align: center;
-	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5); 
 	text-transform: uppercase;
 }	
 
 h2 {	
 	font-size: 1.3em;
 	text-align: center;
-	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4); 
 }
 
 h3 { }
@@ -153,10 +153,15 @@ input[type=submit] {
 	text-shadow: 0 1px 1px rgb(79, 196, 148);
 	margin-bottom: 3%;
 	margin-left: 3%;
+	-webkit-transition: all .1s ease-in-out;
+	   -moz-transition: all .1s ease-in-out;
+		-ms-transition: all .1s ease-in-out;
+		 -o-transition: all .1s ease-in-out;
+		    transition: all .1s ease-in-out;
 }
 
 input[type=submit]:hover {
-	box-shadow: 0px 3px 5px #444;
+	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
 }
 label{ display: block; padding: 3% 0 1.5% 0; }
 /* ===== Figures & Images ===== */
@@ -183,7 +188,7 @@ figcaption { }
 
 .results-pane {
 	background-color: rgb(133, 103, 54);
-	overflow-y: scroll;
+	overflow-y: auto;
 	padding: 1%;
 	width: 100%;
 }
@@ -323,6 +328,30 @@ body {
 .results-pane { 
 	position: relative;
 	width: 60%; 
+}
+
+label, input[type=text], input[type=tel], input[type=email], input[type=number] {
+	display: inline-block;
+}
+
+label {
+	width: 15%;
+}
+
+input[type=text], input[type=tel], input[type=email], input[type=number] {
+	width: 80%;
+	float: right;
+}
+
+
+#boxcheckbox, #boxsizing {
+	display: inline-block;
+	margin-bottom: 4%;
+	width: 27%;
+}
+#boxcheckbox {
+	margin-right: 3%;
+	width: 55%;
 }
 
 }
