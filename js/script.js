@@ -41,7 +41,7 @@ if ($("#boxsizing").is(":checked")) {
  //    
       // not the box-sizing result
             $("<p></p>", {
-            html: ele + " {<br><span>width: " + BoxSizingResult + "%;" + " /* " + target + " / " + context + " */ " + "<br>border: " + border + "px; " + "<br>margin: " + MarginResult + "%; " + "<br>padding: " + PaddingResult+ "%;" + "<br> </span>}"
+            html: ele + " {<br><span>width: " + BoxSizingResult + (BoxSizingResult > 0 ? "%;" : "") + " /* " + target + " / " + context + " */ " + "<br>border: " + border + (border > 0 ? "px" : "") + "; " + "<br>margin: " + MarginResult + (MarginResult > 0 ? "%" : "") + "; " + "<br>padding: " + PaddingResult + (PaddingResult > 0 ? "%" : "") + ";" + "<br> </span>}"
         }).hide().appendTo("#code-results").fadeIn();
 
     }
@@ -51,7 +51,7 @@ else {
     // the box sizing
 
             $("<p></p>", {
-            html: ele + " {<br><span>width: " + OriginalResult + "%;" + " /* " + ActualTarget + " (originally " + target + ") / " + context + " */ " + "<br>border: " + border + "px; " + "<br>margin: " + MarginResult + "%; " + "<br>padding: " + PaddingResult+ "%;" + "<br> </span>}"
+            html: ele + " {<br><span>width: " + OriginalResult + (OriginalResult > 0 ? "%;" : "") + ";" + " /* " + ActualTarget + " (originally " + target + ") / " + context + " */ " + "<br>border: " + border + (border > 0 ? "px" : "") + "; " + "<br>margin: " + MarginResult + (MarginResult > 0 ? "%" : "") + "; " + "<br>padding: " + PaddingResult + (PaddingResult > 0 ? "%" : "") + ";" + "<br> </span>}"
         }).hide().appendTo("#code-results").fadeIn();
 }
 //   
