@@ -1,36 +1,33 @@
 <!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-	<title>RWD Calculator v0.2 | a thing from alwaystwisted.com</title>
-	
-	
+	<title>RWD Calculator v0.6 | a thing from alwaystwisted.com</title>
 	<meta name="description" content="">
 	<meta name="author" content="Stuart Robson, Always Twisted, stu@alwaystwisted.com">
-
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	
-	<link rel="stylesheet" href="css/style.css">
-	<link href='http://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style2.css">
 	<!--[if lt IE 9]>
 	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+
+	<script type="text/javascript" src="http://use.typekit.com/jkb5lvi.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 	<script src="js/libs/respond.min.js"></script>
 </head>
 <body>
+			<a href="https://github.com/sturobson/Responsive-Calculator"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+	<header>
+		<h1 class="tk.chunk">The Responsive Calculator</h1>
+		<h2>{ turning pixels into percentages }</h2>
+	</header>
+	<section>
+		<p>Just a simple calculator to help turn your PSD pixel perfection into the start of your responsive website.</p>
+	</section>
+	
 	<div class="calc function-pane">
-		<header>
-			<h1>The Responsive Calculator</h1>
-			<h2>turning pixels into percentages</h2>
-		</header>
-		<section>
-			<p>Just a simple calculator to help turn your PSD pixel perfection into the start of your responsive website.</p>
-		</section>
+		
 		
 		<label id="boxcheckbox" for="boxsizing">Add - * { box-sizing: border-box; } ? </label>
 		<input type="checkbox" id="boxsizing" lable="boxsizing">
@@ -58,7 +55,7 @@
 	</div>
 
 	<div class="calc results-pane">
-		<a href="http://github.com/sturobson/Responsive-Calculator"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/abad93f42020b733148435e2cd92ce15c542d320/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub"></a>
+
 		<div id="code-results">
 			<div id="boxsizingcss">
 			    <p>* {</p>
@@ -73,37 +70,27 @@
 <footer>
 		  
 		  <p>Created with love, tears and help by <a href="http://www.twitter.com/sturobson/">@sturobson</a></p>
-		  <p>This is just an initial release, I'd love for this to do so much more. <a href="mailto:stu@alwaystisted.com">Can you help?</a></p>
+		  <p>This is just an initial release, I'd love for this to do so much more. <a href="mailto:stu@alwaystwisted.com">Can you help?</a></p>
 		  <p>Why not take a look at my <a href="http://www.alwaystwisted.com/">blog over on alwaystwisted.com</a>
-		  <section>
-		  	<h4>Please Note:</h4>
-		  	<p>I originally came up with this idea in August 2011, it's taken me this long to get it to this state.</p>
-		  	<p>That's why it'll probably break, so help me with the code on github</p>
-		  	<h4>Updates</h4>
-		  	<p>18th March 2012</p>
-		  	<p>Just the initial launch, to get the ball rolling</p>
-		  	<p>20th March 2012</p>
-		  	<p>Added an option to include CSS box-sizing</p>
-		  	<p>21st March 2012</p>
-		  	<p>Added a clear all button</p>
-		  	<p>A tiny update via GitHub to give 0 as a result instead of 0% or 0px</p>
-		  	<p>Added a clear last button</p>
+		  <h4>Buy Me Haribo</h4>
+		  <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+		  <input type="hidden" name="cmd" value="_s-xclick">
+		  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+		  ">
+		  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+		  <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+		  </form>
 		  
-		  </section>
+		  <h4>Share</h4>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.rwdcalc.com" data-text="Check out @RWDCalc a little responsive web designer development tool - www.rwdcalc.com">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		  
 		  
 		</footer>
 	</div>
 
-
-
-
-
-
-
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-<!-- <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script> -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script> 
 
 <!-- scripts concatenated and minified via ant build script-->
 <script src="js/plugins.js"></script>
