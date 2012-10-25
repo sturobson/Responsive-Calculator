@@ -1,0 +1,104 @@
+// The RWD Calc SCSS mixin
+
+
+// Setup defaults
+$target: 960 !default;
+$context: 960 !default;
+
+
+// Just drop this in if you feel like having box-sizing: border-box.
+@mixin border-box {
+  * { 
+       -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+// RWDcalc function converts unitless values to a % of context.
+@function rwdcalc($target: $target, $values: 0) {
+  
+  // start with an empty list of values.
+  $list: ();
+  
+  // loop through all possible values in the string (margin, padding and so on can be lists)
+  @each $value in $values {
+    
+    // If the value has no unit, consider it a px-% converstion
+    @if unit($value) == "" {
+      $list: append($list, percentage($value / $target), space);
+    }
+    
+    // Else pass the value back to the list unchanged.
+    @else {
+      $list: append($list, $value);
+    }
+  }
+  
+  // return the list with unitless values converted.
+  @return $list;
+}
+
+@mixin rwdcalc($target: $target, $context: $context, $margin: false, $padding: false, $border: false) {
+  
+  // Width is a straight converstion of target/context.
+  width: percentage($target / $context);
+  
+  // Margin, padding, and border get converted to % if they are passed in as a unitless value.
+  @if $margin != false {
+    // just pull in the rwdcalc function for these.
+    margin: rwdcalc($target, $margin);
+  }
+  @if $padding != false {
+    padding: rwdcalc($target, $padding);
+  }
+  @if $border != false {
+    @if type-of($border) == list {
+      // Transparent border so metrics get written by default.
+      border: 0 solid transparent;
+      // Write width overrides:
+      border-width: rwdcalc($target, $border);
+    }
+    @else {
+      border: rwdcalc($target, $border) solid transparent;
+    }
+  }
+}
+
+/////// END MIXINs
+
+// Set-up page
+
+@include border-box;
+
+html { 
+  background-color: #383131;
+  color: #F2F2F2;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+
+h1, h2, h3, h4, h5, h6{ 
+  font-family: "Lucida Bright", Georgia, serif;
+  color: #d15300; 
+}
+blockquote, iframe, label, p, pre, address, td, th, ul, ol, dl, dd, hr,
+table {
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  }
+
+a {
+  color: #d15300; 
+  text-decoration: none;
+}
+
+body {
+  
+  @include rwdcalc(300, 320, 5, 3, 2);
+    @media only screen and (min-width: 37.5em) {
+      @include rwdcalc(500, 600, 50);
+    }
+    @media only screen and (min-width: 68.5em) {
+      @include rwdcalc(1000, 1100, 50);
+    }  
+}
