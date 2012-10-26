@@ -1,0 +1,15 @@
+@import 'rwdcalc';
+
+@include border-box;
+
+.foo {
+  @include rwdcalc(200, 960);
+}
+
+.bar {
+  @include rwdcalc(130, 960, 2, 3, 4)
+}
+
+.baz {
+  @include rwdcalc(93, 960, $margin: 1em 30, $border: 4 2px 4% 1.3em)
+}
