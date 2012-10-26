@@ -1,0 +1,27 @@
+/* line 8, ../../../../.rvm/gems/ruby-1.9.2-p320@rwdcalc/gems/rwdcalc-0.0.1/stylesheets/_rwdcalc.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 5, ../sass/example.scss */
+.foo {
+  width: 20.83333%;
+}
+
+/* line 9, ../sass/example.scss */
+.bar {
+  width: 13.54167%;
+  margin: 1.53846%;
+  padding: 2.30769%;
+  border: 3.07692% solid transparent;
+}
+
+/* line 13, ../sass/example.scss */
+.baz {
+  width: 9.6875%;
+  margin: 1em 32.25806%;
+  border: 0 solid transparent;
+  border-width: 4.30108% 2px 4% 1.3em;
+}
