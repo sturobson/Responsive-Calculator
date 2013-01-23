@@ -37,7 +37,7 @@ This funciton can be used to quickly find the context for any value. To find the
 
 ## Mixins
 
-#### Box Sizing
+### Box Sizing
 
 ```scss
 @include border-box;
@@ -45,7 +45,7 @@ This funciton can be used to quickly find the context for any value. To find the
 
 This simply writes `box-sizing: border-box` styles so margin and border subtract from the containers width.
 
-#### RWD Calc mixin
+### RWD Calc mixin
 
 ```scss
 @include rwdcalc($target, $context, $margin, $padding, $border);
