@@ -3,13 +3,18 @@
 @include border-box;
 
 .foo {
-  @include rwdcalc(200, 960);
+  @debug rwdcalc(10 10px 13 1em, 960);
+  @include rwdcalc(200, 960px);
 }
 
 .bar {
-  @include rwdcalc(130, 960, 2, 3, 4)
+  @include rwdcalc(130, 960, 2, 3, 4);
 }
 
 .baz {
-  @include rwdcalc(93, 960, $margin: 1em 30, $border: 4 2px 4% 1.3em)
+  @include rwdcalc(93, 960, $margin: 1em 30, $border: 4 2px 4% 1.3em);
+}
+
+.foo {
+  @include rwdcalc(200, 960, $padding: 1em 10 23px 10);
 }
