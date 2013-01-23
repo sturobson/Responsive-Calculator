@@ -3,7 +3,6 @@
 @include border-box;
 
 .foo {
-  @debug rwdcalc(10 10px 13 1em, 960);
   @include rwdcalc(200, 960px);
 }
 

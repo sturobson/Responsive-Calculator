@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = "rwdcalc"
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.3.5")
   s.authors = ["Stuart Robson", "Scott Kellum"]
