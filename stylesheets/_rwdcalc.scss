@@ -1,8 +1,3 @@
-// Setup defaults
-$target: 960 !default;
-$context: 960 !default;
-
-
 // Just drop this in if you feel like having box-sizing: border-box.
 @mixin border-box {
   * { 
@@ -13,7 +8,10 @@ $context: 960 !default;
 }
 
 // RWDcalc function converts unitless values to a % of context.
-@function rwdcalc($target: $target, $values: 0) {
+@function rwdcalc($values: 0, $context: 960px) {
+  @if unit($context) == px {
+    $context: $context / 1px;
+  }
   
   // start with an empty list of values.
   $list: ();
@@ -23,7 +21,7 @@ $context: 960 !default;
     
     // If the value has no unit, consider it a px-% converstion
     @if unit($value) == "" {
-      $list: append($list, percentage($value / $target), space);
+      $list: append($list, percentage($value / $context), space);
     }
     
     // Else pass the value back to the list unchanged.
@@ -36,28 +34,34 @@ $context: 960 !default;
   @return $list;
 }
 
-@mixin rwdcalc($target: $target, $context: $context, $margin: false, $padding: false, $border: false) {
+@mixin rwdcalc($target: 0, $context: 960px, $margin: false, $padding: false, $border: false) {
+  @if unit($context) == px {
+    $context: $context / 1px;
+  }
+  @if unit($target) == px {
+    $target: $target / 1px;
+  }
   
   // Width is a straight converstion of target/context.
-  width: percentage($target / $context);
-  
+  width: rwdcalc($target, $context);
+
   // Margin, padding, and border get converted to % if they are passed in as a unitless value.
   @if $margin != false {
     // just pull in the rwdcalc function for these.
-    margin: rwdcalc($target, $margin);
+    margin: rwdcalc($margin, $target);
   }
   @if $padding != false {
-    padding: rwdcalc($target, $padding);
+    padding: rwdcalc($padding, $target);
   }
   @if $border != false {
     @if type-of($border) == list {
       // Transparent border so metrics get written by default.
       border: 0 solid transparent;
       // Write width overrides:
-      border-width: rwdcalc($target, $border);
+      border-width: rwdcalc($border, $target);
     }
     @else {
-      border: rwdcalc($target, $border) solid transparent;
+      border: rwdcalc($border, $target) solid transparent;
     }
   }
 }
