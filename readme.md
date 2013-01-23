@@ -10,9 +10,8 @@ This is the Compass version of [rwdcalc.com](http://www.rwdcalc.com/) so you can
 1. Write `require 'rwdcalc'` in your config.rb.
 1. Write `@import 'rwdcalc';` in your SCSS file.
 
-## Useage
 
-### Function
+## Function
 
 ```scss
 rwdcalc($target, $context);
@@ -36,7 +35,7 @@ This funciton can be used to quickly find the context for any value. To find the
 }
 ```
 
-### Mixins
+## Mixins
 
 #### Box Sizing
 
