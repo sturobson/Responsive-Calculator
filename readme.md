@@ -17,7 +17,7 @@ This is the Compass version of [rwdcalc.com](http://www.rwdcalc.com/) so you can
 rwdcalc($target, $context);
 ```
 
-This funciton can be used to quickly find the context for any value. To find the percentage of `30px` out of `90px`, just write `rwdcalc(30, 90)`. You can even pass strings of values through, like `rwdcalc(10 10px 13 1em, 960)` will result in `1.04167% 10px 1.35417% 1em`. Note that the unitless numbers were converted to percentages but if you pass a value with the `px` it will not be converted to a percentage.
+This function can be used to quickly find the context for any value. To find the percentage of `30px` out of `90px`, just write `rwdcalc(30, 90)`. You can even pass strings of values through, like `rwdcalc(10 10px 13 1em, 960)` will result in `1.04167% 10px 1.35417% 1em`. Note that the unitless numbers were converted to percentages but if you pass a value with the `px` it will not be converted to a percentage.
 
 ###### SCSS
 
